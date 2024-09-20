@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap');  
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    transition: all .2s linear;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+
+.card{
+    border-radius:0;
+}
+
+/* Navbar Start */
+
+.website-title{
+    font-family: 'Rubik', sans-serif;
+   }
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* remove the gap so it doesn't close */
+}
+
+.islandName{
+    color:white;
+    font-weight: 600;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.islandName:hover{
+    color:#c19f66;
+}
+
+.titleIsland{
+    font-family: 'Titillium Web', sans-serif;
+    color:#8a8a8a;
+    font-size: 14px;
+}
+
+.titleIsland:hover{
+    color:#c19f66;
+}
+
+.hoverEffect{
+    color:#c19c5c;
+    font-weight: 600;
+}
+
+.hoverEffect:hover{
+    color:#ffd489;
+}
+
+.dropdown-menu{
+    border-radius:0; 
+    background-color:rgb(48, 46, 46); width: 30%;
+}
+
+
+/* Navbar End */
+
+
+/* Video Start */
+
+.home{
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAABhJREFUGFdjtLW1/X/48GFGBiiAM4gXAAD9xgQFHSDLVAAAAABJRU5ErkJggg==);
+}    
+
+.name{
+animation: fadeIn 8s;
+padding:300px 300px;
+}
+
+@keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+@media (max-width: 414px) {
+.videostuff{
+  width:100%;
+  height:100%;
+}
+}  
+
+/* Video End */
+
+/* Paragraph Intro Start */
+
+.h5{
+    font-family: 'Titillium Web', sans-serif;
+}
+
+
+p{
+    line-height: 20px;
+    color: #6C6C6C;
+    font-size: 17px;
+}
+
+.home{
+    position: relative;
+    min-height:100vh;
+}
+
+.videostuff{
+    position:absolute;
+    top:0; 
+    left:0;
+    z-index:-1;
+    width:100%;
+    height:100%; 
+    background: transparent;
+    background-attachment: fixed;
+    object-fit:cover;
+    background-size: cover; 
+    overflow: hidden; 
+} 
+
+#para-intro-info{
+    background-color: #f1eade;
+}
+
+.title{
+    color: #c19f66;
+    line-height: 44px;
+}
+
+/* Paragraph Intro End */
+
+/* Featured Vacations Starts */
+
+a{
+    text-decoration: underline;
+    color:rgb(83, 83, 83);
+}
+
+#FeaturedVac{
+    background-color: #f1eade;
+}
+
+.sub-title{
+    color:#c19f66;
+    text-transform:uppercase;
+    text-decoration: solid;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:14px;
+}
+
+.sub-title:hover{
+    text-decoration: underline;
+}
+
+.description-small {
+    height: 132px;
+    overflow: auto;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.No{
+    font-size:20px;
+    color:#c19f66;
+}
+
+/* Featured Vacation End*/
+
+/* Activities Start */
+
+.activitiesPara{
+    background-color: #f3f0eb;
+}
+
+/* Activities End */
+
+/* WTF Starts */
+
+#WTF{
+    background-color: #f1eade;
+}
+
+@media screen and (max-width: 414px) {
+    .carousel-item img {
+     height: 170px; 
+    }
+  }
+
+  @media screen and (max-width: 540px) {
+    .carousel-item img {
+     height: 220px; 
+    }
+  }
+
+/* WTF Ends */
+
+/* Footer Start*/
+
+.ulFooter li a{
+    text-decoration: none;
+    color:#c19f66;
+    font-size: 17px;
+}
+
+.ulFooter li a:hover{
+    color:#f0dec0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.commentsCard .card-header{
+    background-color:#f1eade;
+    border-radius: 0;
+}
+
+.commentsCard .card-footer{
+    background-color: #f1eade;
+    border-radius: 0;
+}
+/* Footer End */
+
+/* Request Quote Starts Here */
+
+.requestBg{
+    background-color:#f1eade;
+    padding: 40px;
+    padding-right: 200px;
+    padding-left:200px;
+}
+
+.requestQuote{
+    background-color: #e0dad0;
+    padding:100px;
+    padding-top: 50px;
+}
+
+@media (max-width: 412px){
+    .requestBg{
+        padding:2px;
+        padding-right:5px;
+        padding-left:5px;
+    }
+}
+
+@media (max-width: 412px){
+    .requestQuote{
+       padding: 0px;
+   }}
+   
+
+@media (max-width: 412px){
+ .inputS{
+    margin-left:0px;
+    width:60px;
+}}
+
+/* @media (max-width: 412px){
+    input{
+       width:50px;
+   }} */
+
+@media (max-width: 412px){
+    .bbtn{
+        margin-left:40px;
+    }
+}   
+   
+label{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.requestQuote h4{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.bbtn{
+    background-color: rgb(232, 76, 76);
+    width:150px;
+    font-size:22px;
+    margin-left:400px;
+    font-weight: 600;
+}
+
+.bbtn:hover{
+    background-color: rgb(232, 62, 62);
+}
+
+/* Request Quote Ends Here */
+
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 10px; /* width of the entire scrollbar */
+    }
+    
+    ::-webkit-scrollbar-track {
+    background: rgb(19, 18, 18); /* color of the tracking area */
+    }
+    
+    ::-webkit-scrollbar-thumb {
+    background: #c19c5c; /* color of the scroll thumb */
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+    background: #dcb36c; /* color of the scroll thumb on hover */
+    }

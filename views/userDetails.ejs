@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Details</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  scroll-behavior: smooth;
+  padding:10px;
+}
+
+
+.custom-card {
+  border-radius: 0;
+  border: 2px solid #c6a773;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.card-title {
+  color: #333;
+  border-bottom: 2px solid #c6a773;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+
+p {
+  font-size: 16px;
+  color: #333;
+}
+
+p strong {
+  color: #7c6f57;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.custom-card {
+  margin-bottom: 20px;
+}
+
+
+.form-control, .form-select {
+  border-radius: 0;
+  border: 2px solid #c6a773;
+}
+
+.mb-3 select, .mb-3 input, .mb-3 textarea {
+  background-color: #f4f4f4;
+  border-radius: 0;
+  border: 2px solid #c6a773;
+}
+
+
+h1 {
+  color: #c6a773;
+  font-family: 'Georgia', serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+  </style>
+</head>
+<body>
+
+<div class="container mt-5 mb-5">
+  <h1 class="text-center mb-4">Requested Quotes Details</h1>
+
+
+  <% users.forEach(function(user) { %>
+  <div class="card shadow-sm mb-4 custom-card">
+    <div class="card-body">
+      <h5 class="card-title text-uppercase">User Information</h5>
+
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <p><strong>First Name:</strong> <%= user.name %></p>
+        </div>
+        <div class="col-md-6">
+          <p><strong>Last Name:</strong> <%= user.nameLast %></p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <p><strong>Email:</strong> <%= user.email %></p>
+        </div>
+        <div class="col-md-6">
+          <p><strong>Phone Number:</strong> <%= user.number %></p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <p><strong>How many travelers:</strong> <%= user.select1 %></p>
+        </div>
+        <div class="col-md-6">
+          <p><strong>Number of rooms:</strong> <%= user.selectroom %></p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <p><strong>Preferred Departure Date:</strong> <%= new Date(user.departureDate).toDateString() %></p>
+        </div>
+        <div class="col-md-6">
+          <p><strong>Preferred Return Date:</strong> <%= user.returnDate ? new Date(user.returnDate).toDateString() : "N/A" %></p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <p><strong>Departure Airport:</strong> <%= user.airport %></p>
+        </div>
+        <div class="col-md-6">
+          <p><strong>Budget per Person:</strong> $<%= user.budget %></p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <p><strong>Occasion:</strong> <%= user.occassion %></p>
+        </div>
+        <div class="col-md-6">
+          <p><strong>Country of Residence:</strong> <%= user.residenceCountry %></p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <p><strong>Timezone:</strong> <%= user.timezone %></p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-12">
+          <p><strong>Additional Information:</strong> <%= user.textarea %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+
+</div>
+<a href="/" class="sub-title"><p class="sub-title text-center" style="font-size:20px;">Go back</p></a>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
