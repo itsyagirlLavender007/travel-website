@@ -14,9 +14,9 @@ const userSchema = new mongoose.Schema({
     name: String,
     nameLast: String,
     email: String,
-    number: Number, // numbers only (e.g., phone numbers)
-    select1: String, // number of travelers as a string
-    selectroom: String, // number of rooms
+    number: Number, 
+    select1: String, 
+    selectroom: String, 
     departureDate: Date,
     returnDate: Date,
     airport: String,
